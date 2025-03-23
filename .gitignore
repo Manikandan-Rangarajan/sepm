@@ -1,4 +1,10 @@
 node_modules
 venv3
 Reviews.csv
-__pycache__
+models/__pycache__
+models/sentiment_api.log
+models/sentiment_model.pkl
+models/sentiment_model1.pkl
+models/sentiment-analysis.csv
+models/vectorizer.pkl
+models/vectorizer1.pkl

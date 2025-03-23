@@ -1,6 +1,8 @@
 node_modules
 venv3
 
+models/__pycache__
+
 *.csv
 *.pkl
 *.log

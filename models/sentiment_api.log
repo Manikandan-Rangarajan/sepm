@@ -1,0 +1,75 @@
+2025-03-23 14:50:19,530 - INFO - Model and vectorizer loaded successfully
+2025-03-23 14:50:19,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.101:5001
+2025-03-23 14:50:19,552 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 14:50:44,696 - INFO - 127.0.0.1 - - [23/Mar/2025 14:50:44] "OPTIONS /predict HTTP/1.1" 200 -
+2025-03-23 14:50:44,703 - INFO - Scraping reviews from: https://www.flipkart.com/noise-icon-2-1-8-display-bluetooth-calling-women-s-edition-ai-voice-assistant-smartwatch/p/itm968c523d99eae?pid=SMWGEH7VNGPYN5NV&lid=LSTSMWGEH7VNGPYN5NVEORYD7&marketplace=FLIPKART&store=ajy&srno=b_1_1&otracker=browse&fm=organic&iid=en_jGbPhpiORxNlCpTrAHmKvirUIAcdhgunymejUBD6S6nEzOD2Kx3-Bj2_KNA6Jq20FohL7F8vvvfrGcLPp6sulQ%3D%3D&ppt=browse&ppn=browse&ssid=n1q7jivv7k0000001742720407882
+2025-03-23 14:50:46,120 - ERROR - Scraping failed: No reviews found in the page
+2025-03-23 14:50:46,121 - INFO - 127.0.0.1 - - [23/Mar/2025 14:50:46] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-03-23 14:51:34,708 - INFO - 127.0.0.1 - - [23/Mar/2025 14:51:34] "OPTIONS /predict HTTP/1.1" 200 -
+2025-03-23 14:51:34,715 - INFO - Scraping reviews from: https://www.flipkart.com/noise-icon-2-1-8-display-bluetooth-calling-women-s-edition-ai-voice-assistant-smartwatch/p/itm968c523d99eae?pid=SMWGEH7VNGPYN5NV&lid=LSTSMWGEH7VNGPYN5NVEORYD7&marketplace=FLIPKART&store=ajy&srno=b_1_1&otracker=browse&fm=organic&iid=en_jGbPhpiORxNlCpTrAHmKvirUIAcdhgunymejUBD6S6nEzOD2Kx3-Bj2_KNA6Jq20FohL7F8vvvfrGcLPp6sulQ%3D%3D&ppt=browse&ppn=browse&ssid=n1q7jivv7k0000001742720407882
+2025-03-23 14:51:35,784 - ERROR - Scraping failed: No reviews found in the page
+2025-03-23 14:51:35,785 - INFO - 127.0.0.1 - - [23/Mar/2025 14:51:35] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-03-23 14:52:01,007 - WARNING - Invalid request format
+2025-03-23 14:52:01,008 - INFO - 127.0.0.1 - - [23/Mar/2025 14:52:01] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-03-23 14:52:28,413 - WARNING - Invalid request format
+2025-03-23 14:52:28,414 - INFO - 127.0.0.1 - - [23/Mar/2025 14:52:28] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-03-23 14:53:52,525 - ERROR - Exception on /health [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\models\app.py", line 211, in health_check
+NameError: name 'time' is not defined. Did you forget to import 'time'?
+2025-03-23 14:53:52,567 - INFO - 127.0.0.1 - - [23/Mar/2025 14:53:52] "[35m[1mGET /health HTTP/1.1[0m" 500 -
+2025-03-23 14:54:14,961 - ERROR - Exception on /health [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\models\app.py", line 211, in health_check
+NameError: name 'time' is not defined. Did you forget to import 'time'?
+2025-03-23 14:54:14,965 - INFO - 127.0.0.1 - - [23/Mar/2025 14:54:14] "[35m[1mGET /health HTTP/1.1[0m" 500 -
+2025-03-23 14:54:46,643 - ERROR - Exception on /health [GET]
+Traceback (most recent call last):
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\venv3\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Manikandan Rangarjan\Documents\Development\Web dev\sepm\models\app.py", line 211, in health_check
+NameError: name 'time' is not defined. Did you forget to import 'time'?
+2025-03-23 14:54:46,649 - INFO - 127.0.0.1 - - [23/Mar/2025 14:54:46] "[35m[1mGET /health HTTP/1.1[0m" 500 -
+2025-03-23 14:55:46,374 - INFO - Scraping reviews from: https://www.flipkart.com/product-name/p/itm123456789?pid=ABC123
+2025-03-23 14:55:46,601 - ERROR - Scraping failed: Failed to scrape reviews: 500 Server Error: Internal Server Error for url: https://www.flipkart.com/product-name/p/itm123456789?pid=ABC123
+2025-03-23 14:55:46,602 - INFO - 127.0.0.1 - - [23/Mar/2025 14:55:46] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-03-23 14:58:04,852 - INFO - Scraping reviews from: https://www.flipkart.com/samsung-galaxy-f14-5g-omg-black-128-gb/p/itmae94033406fb6?pid=MOBGNBFNDPGNJ3HY
+2025-03-23 14:58:04,982 - ERROR - Scraping failed: Failed to scrape reviews: 500 Server Error: Internal Server Error for url: https://www.flipkart.com/samsung-galaxy-f14-5g-omg-black-128-gb/p/itmae94033406fb6?pid=MOBGNBFNDPGNJ3HY
+2025-03-23 14:58:04,984 - INFO - 127.0.0.1 - - [23/Mar/2025 14:58:04] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -

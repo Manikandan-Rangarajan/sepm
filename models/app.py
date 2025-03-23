@@ -25,11 +25,9 @@ def load_models(model_path='sentiment_model1.pkl', vectorizer_path='vectorizer1.
 
 MODEL, VECTORIZER = load_models()
 
-# Helper: Validate URL
 def validate_url(url):
     return isinstance(url, str) and url.startswith(('http://', 'https://'))
 
-# API: Predict Sentiment
 @app.route('/predict', methods=['POST'])
 def scrape_and_analyze():
     if not MODEL or not VECTORIZER:
@@ -65,7 +63,6 @@ def scrape_and_analyze():
         sentiment_map = {0: 'Negative', 1: 'Neutral', 2: 'Positive'}
         predictions = [sentiment_map.get(pred, 'Unknown') for pred in raw_predictions]
         
-        # Debug: Print predictions to verify
         print(f"Raw predictions: {list(raw_predictions)}")
         print(f"Mapped predictions: {predictions}")
 
@@ -85,17 +82,6 @@ def scrape_and_analyze():
     except Exception as e:
         print(f"Prediction error: {e}")
         return jsonify({"error": "Internal server error"}), HTTPStatus.INTERNAL_SERVER_ERROR
-
-# API: Health Check
-@app.route('/health', methods=['GET'])
-def health_check():
-    status = "healthy" if MODEL and VECTORIZER else "unhealthy"
-    print(f"Health check: {status}")
-    return jsonify({
-        "status": status,
-        "model_loaded": bool(MODEL),
-        "vectorizer_loaded": bool(VECTORIZER)
-    }), HTTPStatus.OK
 
 if __name__ == '__main__':
     print("Starting Flask server on port 5001...")
